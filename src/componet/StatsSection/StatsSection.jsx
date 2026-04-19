@@ -1,18 +1,18 @@
 import React from "react";
 import "./StatsSection.css";
 
-import img1 from "../../assets/Rectangle 12.png"; // bust
-import img2 from "../../assets/Rectangle 16.png"; // center house
-import img3 from "../../assets/Rectangle 15.png"; // horses
+import img1 from "../../assets/Rectangle 12.png"; 
+import img2 from "../../assets/Rectangle 16.png"; 
+import img3 from "../../assets/Rectangle 15.png"; 
 
 const StatsSection = () => {
   return (
     <section className="stats-section">
 
-      {/* top divider */}
+    
       <div className="divider"></div>
 
-      {/* stats */}
+     
       <div className="stats">
         <div className="stat-item">
           <h1>12+</h1>
@@ -30,10 +30,9 @@ const StatsSection = () => {
         </div>
       </div>
 
-      {/* bottom divider */}
       <div className="divider"></div>
 
-      {/* center text */}
+    
       <div className="center-text">
         <h2>One step towards your <br/>dream home</h2>
         <p>Challenging ourselves in every project</p>
@@ -41,11 +40,11 @@ const StatsSection = () => {
 
       <div className="image-section">
 
-  {/* TOP SMALL TEXT */}
+
 
   <div className="image-layout">
 
-    {/* LEFT SIDE (image + text) */}
+  
     <div className="left-block">
       <div className="img-left">
         <div className="top-bar"></div>
@@ -63,13 +62,12 @@ const StatsSection = () => {
      
     </div>
 
-    {/* RIGHT IMAGE (behind) */}
+   
     <div className="imagefix">
   <div className="img-right">
       <img src={img2} alt="horses" />
     </div>
 
-    {/* CENTER IMAGE (front) */}
     <div className="img-center">
       <img src={img3} alt="house" />
     </div>

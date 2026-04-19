@@ -4,142 +4,95 @@ import main from "../../assets/Rectangle 17.png";
 import cardimage from "../../assets/Rectangle 18.png";
 import cardimage2 from "../../assets/Rectangle 19.png";
 import cardimage3 from "../../assets/Rectangle 20.png";
+
+const cardData = [
+  {
+    number: "01",
+    title: "Design",
+    image: cardimage,
+    text: `The design stage begins by developing an understanding of our client's needs and predispositions in an initial consultation with one of our designers.
+
+After this dialogue, we present the first draft of the design with a full explanation of our suggestions and their rationale.
+
+After client feedback, we rework our design to include any required modifications.
+
+After their approval, we finalize the design and take full measurements.`,
+  },
+  {
+    number: "02",
+    title: "Pricing and Material Approval",
+    image: cardimage2,
+    text: `Once full measurements have been calculated and quantities estimated,
+
+We present a comprehensive cost analysis, giving clients a range of material options commensurate with their project and budget.`,
+  },
+  {
+    number: "03",
+    title: "Implementation",
+    image: cardimage3,
+    text: `After approving the plans and with the clients approval of carefully chosen materials,
+
+We carry out the finishing and decoration work, monitoring the fit-out throughout its progress.
+
+After this, we provide our clients with peace of mind thanks to our aftersales service.`,
+  },
+];
+
 const Services = () => {
   return (
-    <div className="services-main" style={{ background: " #4b5d6b" }}>
+    <div className="services-main">
 
-
+    
       <section className="services">
-
         <div className="services-container">
 
-          {/* Top small text */}
-          <p className="services-subtitle">
-            Innovative architectural designs
-          </p>
+          <p className="services-subtitle">Innovative architectural designs</p>
 
-          {/* Right aligned heading */}
           <div className="services-header">
             <h2>
-              The place where you spend your <br /> time is a direct reflection of your <br /> culture
+              The place where you spend your time is a direct reflection of your culture
             </h2>
           </div>
 
-          {/* Image */}
           <div className="services-image">
-            <img src={main} alt="" />
-
-            <div className="bottom-line"></div>
-            <div className="left-box"></div>
+            <img src={main} alt="Architecture showcase" />
+            <div className="corner-box"></div>
+            <div className="vertical-line2"></div>
           </div>
 
         </div>
-
-
       </section>
-      <p className="services-description" style={{ color: "#ECEEEF" ,marginLeft: "230px",marginTop:"70px"}}>Our works goes through three stages</p>
-      {/* card */}
-      <div>
-        <div className="services">
-          <div className="section-divider"></div>
 
-          <div className="services-cards" style={{ gap: "200px" }}>
+      
+      <p className="services-description">Our works goes through three stages</p>
+
+  
+      {cardData.map((card, index) => (
+        <div key={index} className="services">
+          <div className="section-divider" />
+
+          <div className="services-cards">
+
+       
             <div className="left-card">
-
-
               <div>
-                <div>
-                  <span className="number" >01</span>
-                  <div className="number-line"></div>
-                </div>
-
-                <p1 className="design-text" style={{ color: "#ECEEEF" }}>Design</p1>
+                <span className="number">{card.number}</span>
+                <div className="number-line" />
               </div>
-              <button className="contact-btn" style={{ color: "white", backgroundColor: "transparent", border: "1px solid red" }}>
-                View Project →</button>
+              <span className="design-text">{card.title}</span>
+              <button className="contact-btn">View Project →</button>
             </div>
+
             <div className="right-card">
-              <img src={cardimage} alt="" />
-              <d style={{ color: "#ECEEEF" }}>
-                The design stage begins by <br /> developing an understanding of <br /> our client’s needs and <br /> predispositions in an initial <br /> consultation with one of our <br />designers
-                After this dialogue,<br /> we present the<br /> first draft of <br />the design with a full explanation of<br /> our suggestions and their<br /> rationale.<br /><br />
-                After client feedback, we rework<br /> our design to include any<br /> required modifications.<br /><br />
-                After their approval, we finalize <br />the design and take full<br /> measurements.
-              </d>
+              <img src={card.image} alt={card.title} />
+              <p className="card-text">{card.text}</p>
             </div>
+
           </div>
-          <div className="section-divider"></div>
+
+          <div className="section-divider" />
         </div>
-        <div className="services">
-
-
-          <div className="services-cards" style={{ gap: "0px" }}>
-            <div className="left-card">
-
-
-              <div>
-                <div>
-                  <span className="number" >02</span>
-                  <div className="number-line"></div>
-                </div>
-
-                <p1 className="design-text" style={{ color: "#ECEEEF" }}>Pricing and Material Approbal</p1>
-              </div>
-              <button className="contact-btn" style={{ color: "white", backgroundColor: "transparent", border: "1px solid red" }}>
-                View Project →</button>
-            </div>
-            <div className="right-card">
-              <img src={cardimage2} alt="" />
-              <d style={{ color: "#ECEEEF" }}>
-                Once full measurements have <br /> calculated and quantities <br />estimated,
-                <br /><br />
-
-                We present a comprehensive <br />cost analysis, giving clients a range of <br />
-                material <br />options commensurate <br /> with their project and budget.
-              </d>
-            </div>
-          </div>
-          <div className="section-divider"></div>
-        </div>
-        <div className="services">
-
-          <div className="services-cards" style={{ gap: "200px" }}>
-            <div className="left-card">
-
-
-              <div>
-                <div>
-                  <span className="number" >03</span>
-                  <div className="number-line"></div>
-                </div>
-
-                <p1 className="design-text" style={{ color: "#ECEEEF" }}>Implementation</p1>
-              </div>
-              <button className="contact-btn" style={{ color: "white", backgroundColor: "transparent", border: "1px solid red" }}>
-                View Project →</button>
-            </div>
-            <div className="right-card">
-              <img src={cardimage3} alt="" />
-              <d style={{ color: "#ECEEEF" }}>
-                After approving the plans and<br />
-                with the clients approval of<br />
-                carefully chosen materials,
-                <br /><br />
-
-                We carry out the finishing and<br />
-                decoration work, monitoring the<br />
-                fit-out throughout its progress.
-                <br /><br />
-
-                After this, we provide our<br />
-                clients with peace of mind<br />
-                thanks to our aftersales service.
-              </d>
-            </div>
-          </div>
-          <div className="section-divider"></div>
-        </div>
-      </div>
+      ))}
 
     </div>
   );
