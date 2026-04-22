@@ -238,21 +238,4 @@
     z-index: 2;
   }
 }
-@media (max-width: 480px) {
 
-  
-  .img-right,
-  .img-center {
-    position: static;   
-    width: 100%;
-    text-align: center;
-  }
-
- 
- 
-  .img-center {
-    margin-top: -60px;
-    z-index: 2;
-  }
-
-}

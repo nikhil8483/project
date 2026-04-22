@@ -5,7 +5,6 @@ const ContactSection = () => {
   return (
     <section className="contact-section">
 
-      {/* ── LEFT ── */}
       <div className="contact-left">
         <p className="small-title">Also get in touch</p>
 
@@ -27,7 +26,7 @@ const ContactSection = () => {
       {/* ── DIVIDER (vertical on desktop, horizontal on mobile) ── */}
       <div className="vertical-line" />
 
-      {/* ── RIGHT ── */}
+    
       <div className="contact-right">
         <h2>Register your interest</h2>
         <p className="sub-text">
